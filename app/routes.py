@@ -1,5 +1,5 @@
 from app.models import User
-from app.forms import RegisterForm, LoginForm
+from app.forms import RegisterForm, LoginForm, BlogUpdateForm
 from app import app, db
 from flask import render_template, redirect, url_for, flash
 from flask_login import current_user, login_required, logout_user, login_user
@@ -60,6 +60,13 @@ def dashboard():
     return render_template("dashboard.html", title='Dashboard')
 
 @app.route('/logout')
+@login_required
 def logout():
     logout_user()
     return redirect(url_for('login'))
+
+@app.route('/blogupdate', methods=['GET', 'POST'])
+@login_required
+def update_blog():
+    form = BlogUpdateForm()
+    return render_template('blog-update.html', title='Update Blog', form=form)
