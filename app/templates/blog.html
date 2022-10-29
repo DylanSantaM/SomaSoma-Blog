@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block app_context %}
+
+<div class="row">
+    <div id='blog-main'>
+        <div class="col-sm-6 text-left">
+            <h1>Template Imheritance in Flask</h1>
+        </div>
+        <div class="col-sm-6 text-right">
+            <h1>October 15 2022</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <img class="card-img-top" src=".{{ url_for('static', filename='images/organising.png') }}"class='img-fluid' style='max-width: 100%; height: auto;' alt='Card' >
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="col-sm-8">
+                <h2>
+                    It is a very common feature where web applications allow users to interact with the application. Users can post comments or send messages. All these data are normally collected using web forms. Flask provides a simple way to create web forms using the Flask-WTF extension.
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
