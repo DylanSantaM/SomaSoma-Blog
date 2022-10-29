@@ -131,3 +131,14 @@ h1 {
     width: 100%;
     color: white;
 }
+
+.card-deck, .blog {
+    transition: all 2s;
+    box-shadow: 5px 5px 10px 5px #ebeae9;
+    padding: 20px
+}
+.card-deck:hover, .blog:hover {
+    transition: all 2s;
+    box-shadow: 5px 5px 10px 5px #c4c4c4;
+    border-radius: 50px;
+}
