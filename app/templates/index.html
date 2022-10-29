@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block app_context %}
+<div class="row hero">
+    <div class="col-md-5 hero-text">
+        <p>
+            Dare to be different.<br><br>
+            Put in the work! Learn something new!
+        </p>
+        <button><a href='{{ url_for("courses") }}'>Discover</a> </button>
+    </div>
+    <div class="col-md-7 text-center hero-img">
+        <img src="{{ url_for('static', filename='images/hero.png') }}" class="img-fluid" style="max-width: 100%; height: auto;"
+        >
+    </div>
+</div>
+{% endblock %}
